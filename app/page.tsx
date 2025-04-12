@@ -13,14 +13,35 @@ import ChatSection from "./components/chat-section";
  */
 export default function Home() {
   return (
-    <main className="h-screen w-screen flex justify-center items-center background-gradient">
-      <div className="space-y-2 lg:space-y-10 w-[90%] lg:w-[60rem]">
-        <Header />
-        <br/>        
-        <ResultadoBusqueda/>
-        <br/>
-        <Footer/>
+    // h-screen w-screen flex justify-center items-center background-gradient
+    // agregar div que permita agregar componentes
+    // de la parte superior e inferior
+    // y que el chat ocupe el espacio restante
+    // <div className="h-screen w-screen flex justify-center items-center background-gradient"></div>
+    //   <div className="h-screen w-screen flex justify-center items-center background-gradient"> 
+    //     <div className="h-[65vh] flex">
+    //       <ChatSection />
+    //     </div>
+    //   </div>
+    // <div className="h-screen w-screen flex justify-center items-center background-gradient">
+    //   <div className="h-[65vh] flex">
+    //     <ChatSection />
+    //   </div>
+    // </div>
+         
+     <div className="h-screen w-screen flex justify-center items-center background-gradient">
+      <div className="absolute top-0 left-0 w-full flex justify-center items-center">
+          <Header />
       </div>
-    </main>
+
+      <div className="h-[65vh] flex">
+         <ChatSection />
+      </div>
+      <div className="absolute bottom-0 left-0 w-full flex justify-center items-center">
+          <Footer />
+       </div>           
+     </div>
+     
+    
   );
 }
