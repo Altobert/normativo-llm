@@ -2,7 +2,10 @@
 export default function Footer() {
 
   return(    
-    <button>Soy un boton footer</button>
+    <div>
+      <h2>Este es mi footer</h2>
+      <h2>Este es mi footer del servicio</h2>
+    </div>
   );
  
 }

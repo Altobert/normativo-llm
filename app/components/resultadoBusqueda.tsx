@@ -2,7 +2,10 @@
 export default function ResultadoBusqueda() {
 
     return(
-        <button>Soy Resultado busqueda</button>
+        <div>
+            <h2>Este es mi resultado de busqueda filete</h2>
+            <h2>Este es mi resultado de busqueda filete</h2>
+        </div>
     );
   
 }
