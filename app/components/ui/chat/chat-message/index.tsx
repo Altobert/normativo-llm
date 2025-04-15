@@ -156,9 +156,9 @@ export default function ChatMessage({
 }) {
   const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 2000 });
   return (
-    <div className="flex items-start gap-4 pr-5 pt-5">
+    <div className="">
       <ChatAvatar role={chatMessage.role} />
-      <div className="group flex flex-1 justify-between gap-2">
+      <div className="">
         <ChatMessageContent
           message={chatMessage}
           isLoading={isLoading}
