@@ -22,7 +22,7 @@ export default function Home() {
       <div className="absolute top-10 left-0 w-full flex justify-center items-center">
           <BodySearchNorma />
       </div>       
-      <div className="h-[65vh]" style={{ marginRight: "-53rem" }}>
+      <div className="h-[58vh]" style={{ marginRight: "-33rem" }}>
         <ChatSection />
       </div>
         
