@@ -1,7 +1,7 @@
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import BodySearchNorma from "./components/body-search-norma";
-import ChatSection from "./components/chat-section";
+import NavBarNormativo from "./components/navbar-normativo";
 
 /**
  * 
@@ -9,28 +9,34 @@ import ChatSection from "./components/chat-section";
  * <div className="h-[65vh] flex">          
     <ChatSection />         
   </div>
+
+  <div className="h-[58vh]" style={{ marginRight: "-33rem" }}>
+        <ChatSection />
+  </div>
  *  
  */
 export default function Home() {
   return (
-
-     <div className="h-screen w-screen flex justify-center items-center background-gradient">
-      <div className="absolute top-0 left-0 w-full flex justify-center items-center">
+    <main className="bg-gray-100 font-sans leading-normal tracking-normal">
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex-1">
           <Header />
+        </div>
+        <div className="">
+          <NavBarNormativo />
+        </div>
       </div>
-     <br />            
-      <div className="absolute top-10 left-0 w-full flex justify-center items-center">
+
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex-1">
           <BodySearchNorma />
-      </div>       
-      <div className="h-[58vh]" style={{ marginRight: "-33rem" }}>
-        <ChatSection />
+        </div>
       </div>
-        
-      <div className="absolute bottom-0 left-0 w-full flex justify-center items-center">
-          <Footer />
-       </div>           
-     </div>
-     
-    
+
+      <Footer />
+      <div className="flex flex-col lg:flex-row">
+
+      </div>        
+    </main>
   );
 }
