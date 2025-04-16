@@ -17,15 +17,13 @@ import NavBarNormativo from "./components/navbar-normativo";
  */
 export default function Home() {
   return (
+    
     <main className="bg-gray-100 font-sans leading-normal tracking-normal">
-      <div className="flex flex-col lg:flex-row">
-        <div className="flex-1">
-          <Header />
-        </div>
-        <div className="">
-          <NavBarNormativo />
-        </div>
-      </div>
+      
+      <Header />
+      
+      <NavBarNormativo />
+      
   
       <div className="container mx-auto p-4">
         <section className="space-y-4">
@@ -34,7 +32,7 @@ export default function Home() {
 
         </section>
       </div>
-      
+
 
       <Footer />      
     </main>

@@ -7,16 +7,14 @@ const NavBarNormativo = () => {
       <div className="container mx-auto">
         <ul className="flex space-x-4">
 
-
           <li>
-            <Link href="/" className="text-gray-500 hover:text-blue-500">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-blue-500">Buscar Proyectos </Link>
           </li>
-
-          <li><a href="#" className="text-gray-500 hover:text-blue-500">Destinos</a></li>
+          
           <li>
             <Link href="/chatia" 
                      className="text-gray-500 hover:text-blue-500">
-                       ChatIA
+                       ChatIA Normativo
             </Link>
           </li>          
         </ul>
