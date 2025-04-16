@@ -14,16 +14,11 @@ const NavBarNormativo = () => {
 
           <li><a href="#" className="text-gray-500 hover:text-blue-500">Destinos</a></li>
           <li>
-            <Link href="/nosotros" 
+            <Link href="/chatia" 
                      className="text-gray-500 hover:text-blue-500">
-                       Nosotros
+                       ChatIA
             </Link>
-          </li>
-          <li>
-            <Link href="/contacto" 
-                className="text-gray-500 hover:text-blue-500">Contacto
-            </Link>
-          </li>
+          </li>          
         </ul>
       </div>
     </nav>

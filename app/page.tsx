@@ -26,17 +26,17 @@ export default function Home() {
           <NavBarNormativo />
         </div>
       </div>
+  
+      <div className="container mx-auto p-4">
+        <section className="space-y-4">
 
-      <div className="flex flex-col lg:flex-row">
-        <div className="flex-1">
-          <BodySearchNorma />
-        </div>
+        <BodySearchNorma />
+
+        </section>
       </div>
+      
 
-      <Footer />
-      <div className="flex flex-col lg:flex-row">
-
-      </div>        
+      <Footer />      
     </main>
   );
 }

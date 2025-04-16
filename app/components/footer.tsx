@@ -1,11 +1,13 @@
+import React from 'react'
 
-export default function Footer() {
-
-  return(    
-    <div>
-      <h2>Este es mi footer</h2>
-      <h2>Este es mi footer del servicio</h2>
-    </div>
-  );
- 
+const Footer = () => {
+  return (
+    <footer className="bg-blue-500 p-4 text-white mt-8">
+        <div className="container mx-auto">
+          <p className="text-center">Hecho en React + NextJS + LlamaIndex | Buscador de Proyectos Normativos SII.</p>
+        </div>
+      </footer>
+  )
 }
+
+export default Footer
