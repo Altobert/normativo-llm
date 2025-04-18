@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-500 p-4 text-white mt-8">
+    <footer className="bg-sky-950 p-4 text-white mt-8">
         <div className="container mx-auto">
           <p className="text-center">Hecho en React + NextJS + LlamaIndex | Buscador de Proyectos Normativos SII.</p>
         </div>
