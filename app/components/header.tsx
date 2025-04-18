@@ -11,9 +11,8 @@ export default function Header() {
             height={90}           
           />
       <div className="container mx-auto">
-          <h1 className="text-4xl font-bold center">
-            𝗘𝗦𝗧𝗔𝗗𝗢 DE 𝗖𝗛𝗜𝗟𝗘
-              Buscador Proyectos Normativos
+          <h1 className="text-4xl font-bold center">          
+              Buscador Proyectos Normativos del Servicio de Impuestos Internos
           </h1>
       </div>
     </header>        
