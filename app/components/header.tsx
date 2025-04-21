@@ -12,7 +12,7 @@ export default function Header() {
           />
       <div className="container mx-auto">
           <h1 className="text-4xl font-bold center">          
-              Buscador Proyectos Normativos del Servicio de Impuestos Internos
+              Buscador de Proyectos Normativos del Servicio de Impuestos Internos
           </h1>
       </div>
     </header>        
