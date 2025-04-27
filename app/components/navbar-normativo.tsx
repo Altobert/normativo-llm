@@ -16,7 +16,15 @@ const NavBarNormativo = () => {
                      className="text-gray-500 hover:text-blue-500">
                        ChatIA Normativo
             </Link>
-          </li>          
+          </li>   
+
+          <li>
+            <Link href="/uploadproyectos" 
+                  className="text-gray-500 hover:text-blue-500">
+                    Carga de Proyectos Normativos 
+            </Link>
+          </li>
+          
         </ul>
       </div>
     </nav>
