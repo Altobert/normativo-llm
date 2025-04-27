@@ -13,10 +13,7 @@ const page = () => {
 
             <NavBarNormativo />            
             
-            <div className="container mx-auto px-4 py-8">
-                <h1 className="text-3xl font-bold mb-4">Subir Proyectos</h1>
-                <p className="text-gray-700 mb-8">Aquí puedes subir tus proyectos.</p>
-
+            <div className="container mx-auto px-4 py-8">                
                 <UploadProyectos />
             </div>
  
