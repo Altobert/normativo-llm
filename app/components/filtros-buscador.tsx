@@ -15,11 +15,21 @@ import React from 'react'
  * 11. departamento o unidad responsable
  */
 
+// FiltrosBuscador.tsx
+// Este componente es un formulario que permite a los usuarios buscar proyectos normativos
+// necesito un menu lateral izquiero que implemente los filtros
+
 const FiltrosBuscador = () => {
   return (
     <div className="container mx-auto p-10">
         
-        <form className="bg-white p-6 rounded shadow-md">
+        <h1 className="text-2xl font-bold mb-4">Filtros de Búsqueda de Proyectos Normativos</h1>
+        <p className="mb-4">Utiliza los siguientes filtros para encontrar proyectos normativos específicos:</p>
+        
+        {/* Formulario de búsqueda */}
+         {/* Este formulario permite a los usuarios ingresar criterios de búsqueda para filtrar proyectos normativos */}
+
+        <form className="bg-white p-4 rounded shadow-md">
             <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tipo-proyecto">
                     Tipo de Proyecto:
@@ -32,11 +42,21 @@ const FiltrosBuscador = () => {
                 </label>
                 <input type="text" id="estado-proyecto" className="border rounded w-full py-2 px-3 text-gray-700" />
             </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="fecha-publicacion">
+                    Fecha de Publicación (Desde, Hasta):
+                </label>
+                <input type="date" id="fecha-publicacion-desde" className="border rounded w-full py-2 px-3 text-gray-700 mb-2" />
+                <input type="date" id="fecha-publicacion-hasta" className="border rounded w-full py-2 px-3 text-gray-700" />
+            </div>
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Buscar
             </button>
         </form>
-        <div className="mt-4">
+
+        {/*
+         Resultados de búsqueda 
+         <div className="mt-4">
             <h2 className="text-xl font-bold mb-2">Proyectos Normativos Encontrados</h2>
             <ul className="list-disc pl-5">
                 <li>
@@ -55,8 +75,9 @@ const FiltrosBuscador = () => {
                     </Link>
                 </li>
             </ul>
-        </div>   
-
+        </div>      
+        */}
+        
     </div>
   );
 }

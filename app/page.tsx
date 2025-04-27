@@ -35,7 +35,7 @@ export default function Home() {
         
       </div>
 
-      <div className="h-[58vh]" style={{ marginRight: "30rem" }}>
+      <div className="h-[69vh]" style={{ marginRight: "30rem" }}>
           <FiltrosBuscador />
       </div>
 
