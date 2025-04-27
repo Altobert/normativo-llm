@@ -48,26 +48,7 @@ const BodySearchNorma: React.FC = () => {
                     Buscar
                 </button>
             </form>
-            <div style={{ marginTop: '20px' }}>
-                <h2 style={{ fontSize: '24px', fontWeight: 'bold' }}>Proyectos Normativos Encontrados</h2>
-                <ul style={{ listStyleType: 'none', padding: 0 }}>
-                    <li>
-                        <a href="/proyecto1" style={{ color: '#4285F4', textDecoration: 'underline' }}>
-                            Proyecto Normativo 1
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/proyecto2" style={{ color: '#4285F4', textDecoration: 'underline' }}>
-                            Proyecto Normativo 2
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/proyecto3" style={{ color: '#4285F4', textDecoration: 'underline' }}>
-                            Proyecto Normativo 3
-                        </a>
-                    </li>
-                </ul>
-            </div>    
+            
         </div>
     );
 };

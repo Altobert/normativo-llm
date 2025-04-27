@@ -2,6 +2,7 @@ import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import BodySearchNorma from "./components/body-search-norma";
 import NavBarNormativo from "./components/navbar-normativo";
+import FiltrosBuscador from "./components/filtros-buscador";
 
 /**
  * 
@@ -31,8 +32,12 @@ export default function Home() {
         <BodySearchNorma />
 
         </section>
+        
       </div>
 
+      <div className="h-[58vh]" style={{ marginRight: "30rem" }}>
+          <FiltrosBuscador />
+      </div>
 
       <Footer />      
     </main>
