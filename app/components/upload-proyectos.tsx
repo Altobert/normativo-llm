@@ -7,6 +7,8 @@ const UploadProyectos: React.FC = () => {
   // Estado para almacenar el archivo seleccionado
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
+  // Función para manejar el cambio de archivo. Cuando el usuario selecciona un archivo, se verifica si es un PDF y se actualiza el estado.
+  // Si no es un PDF, se muestra una alerta.
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -18,6 +20,8 @@ const UploadProyectos: React.FC = () => {
     }
   };
 
+  // Función para manejar la carga del archivo. 
+  // Se crea un FormData y se envía una solicitud POST al servidor.
   const handleUpload = async () => {
     if (!selectedFile) {
       alert('Por favor, primero selecicone un archivo.');
@@ -51,9 +55,7 @@ const UploadProyectos: React.FC = () => {
     } else {
       alert('No se ha seleccionado ningún archivo.');
     }
-  };*/
 
-  return (
     <div>
       <h2>Subir Documento PDF</h2>
       <input
@@ -65,6 +67,51 @@ const UploadProyectos: React.FC = () => {
         Subir Archivo
       </button>
     </div>
+  };*/
+
+  return (
+    <div className="container mx-auto p-10">
+        <h1 className="text-2xl font-bold mb-4">Subir Proyectos Normativos</h1>
+        <p className="mb-4">Selecciona un archivo PDF para subir:</p>
+        <input
+            type="file"
+            accept="application/pdf"
+            onChange={handleFileChange}
+            className="mb-4"
+        />
+        <button
+            onClick={handleUpload}
+            disabled={!selectedFile}
+            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${!selectedFile ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+            Cargar Proyecto Normativo
+        </button>
+     <div className="mt-4">
+             <h2 className="text-xl font-bold mb-2">Proyectos Subidos</h2>
+             <ul className="list-disc pl-5">
+                 <li>Proyecto 1</li>
+                 <li>Proyecto 2</li>
+                 <li>Proyecto 3</li>
+             </ul>
+     </div>    
+     <div className="mt-4">
+             <h2 className="text-xl font-bold mb-2">Proyectos en Revisión</h2>
+             <ul className="list-disc pl-5">
+                 <li>Proyecto A</li>
+                 <li>Proyecto B</li>
+                 <li>Proyecto C</li>
+             </ul>
+     </div>
+     <div className="mt-4">
+             <h2 className="text-xl font-bold mb-2">Proyectos Aprobados</h2>
+             <ul className="list-disc pl-5">
+                 <li>Proyecto X</li>
+                 <li>Proyecto Y</li>
+                 <li>Proyecto Z</li>
+             </ul>
+     </div>
+</div>
+    
   );
 };
 
