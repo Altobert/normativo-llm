@@ -1,46 +1,71 @@
-import Link from 'next/link'
-import React from 'react'
+'use client'
+import { useState } from 'react'
+import React from 'react';
 
-const UploadProyectos = () => {
-  return (    
-    <div className="container mx-auto p-10">
-           <form className="bg-white p-6 rounded shadow-md">
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="file-upload">
-                            Selecciona Proyecto Normativo desde tu PC:
-                        </label>
-                        <input type="file" id="file-upload" className="border rounded w-full py-2 px-3 text-gray-700" />
-                    </div>
-                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Subir
-                    </button>
-            </form>   
-            <div className="mt-4">
-                    <h2 className="text-xl font-bold mb-2">Proyectos Subidos</h2>
-                    <ul className="list-disc pl-5">
-                        <li>Proyecto 1</li>
-                        <li>Proyecto 2</li>
-                        <li>Proyecto 3</li>
-                    </ul>
-            </div>    
-            <div className="mt-4">
-                    <h2 className="text-xl font-bold mb-2">Proyectos en Revisión</h2>
-                    <ul className="list-disc pl-5">
-                        <li>Proyecto A</li>
-                        <li>Proyecto B</li>
-                        <li>Proyecto C</li>
-                    </ul>
-            </div>
-            <div className="mt-4">
-                    <h2 className="text-xl font-bold mb-2">Proyectos Aprobados</h2>
-                    <ul className="list-disc pl-5">
-                        <li>Proyecto X</li>
-                        <li>Proyecto Y</li>
-                        <li>Proyecto Z</li>
-                    </ul>
-            </div>
+const UploadProyectos: React.FC = () => {
+  
+  // Estado para almacenar el archivo seleccionado
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.type === 'application/pdf') {
+        setSelectedFile(file);
+      } else {
+        alert('Por favor, selecciona un archivo PDF.');
+      }
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      alert('Por favor, primero selecicone un archivo.');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+
+    try {
+      const response = await fetch('http://127.0.0.1:8080/api/documents/upload', {
+        method: 'POST',
+        body: formData,
+      });
+      if (response.ok) {
+        alert('Archivo cargado de forma exitosa!');
+      } else {
+        alert('Fallida la carga del archivo.');
+      }
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      alert('An error occurred while uploading the file.');
+    }
+  };
+
+  /*const handleUpload = () => {
+    if (selectedFile) {
+      // Aquí puedes manejar la lógica para subir el archivo
+      console.log('Archivo seleccionado:', selectedFile);
+      alert(`Archivo "${selectedFile.name}" listo para subir.`);
+    } else {
+      alert('No se ha seleccionado ningún archivo.');
+    }
+  };*/
+
+  return (
+    <div>
+      <h2>Subir Documento PDF</h2>
+      <input
+        type="file"
+        accept="application/pdf"
+        onChange={handleFileChange}
+      />
+      <button onClick={handleUpload} disabled={!selectedFile}>
+        Subir Archivo
+      </button>
     </div>
   );
-}
+};
 
-export default UploadProyectos
+export default UploadProyectos;
