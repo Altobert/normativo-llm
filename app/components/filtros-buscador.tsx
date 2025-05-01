@@ -21,11 +21,15 @@ import React from 'react'
 
 const FiltrosBuscador = () => {
   return (
-    <div className="container mx-auto p-10">
+    //disminuir tamanio contenedor    
+    // agregar un menu lateral izquierdo que implemente los filtros
+    
+    
+    <div className="container mx-auto p-10 bg-gray-100 rounded shadow-md mt-4 mb-4">
         
         <h1 className="text-2xl font-bold mb-4">Filtros de Búsqueda de Proyectos Normativos</h1>
         <p className="mb-4">Utiliza los siguientes filtros para encontrar proyectos normativos específicos:</p>
-        
+        {/* disminuir tamanio contenedor */}    
         {/* Formulario de búsqueda */}
          {/* Este formulario permite a los usuarios ingresar criterios de búsqueda para filtrar proyectos normativos */}
 
