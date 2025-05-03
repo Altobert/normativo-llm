@@ -14,6 +14,10 @@ import FiltrosBuscador from "./components/filtros-buscador";
   <div className="h-[58vh]" style={{ marginRight: "-33rem" }}>
         <ChatSection />
   </div>
+
+  <div className="h-[69vh]" style={{ marginRight: "30rem" }}>
+          <FiltrosBuscador />
+  </div>
  *  
  */
 export default function Home() {
@@ -33,10 +37,6 @@ export default function Home() {
 
         </section>
         
-      </div>
-
-      <div className="h-[69vh]" style={{ marginRight: "30rem" }}>
-          <FiltrosBuscador />
       </div>
 
       <Footer />      
