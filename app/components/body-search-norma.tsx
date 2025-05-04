@@ -160,6 +160,70 @@ const BodySearchNorma: React.FC = () => {
             className="border border-gray-300 rounded py-2 px-4 w-full"
           />
         </div>
+        <div className="mb-4">
+        <label className="block font-bold mb-2">Departamento:</label>
+        <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="border border-gray-300 rounded py-2 px-4 w-full"
+          >
+            <option value="">Todos</option>
+            <option value="departamento1">Departamento 1</option>
+            <option value="departamento2">Departamento 2</option>
+            <option value="departamento3">Departamento 3</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+        <label className="block font-bold mb-2">Palabra Clave:</label>
+        <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Escribe tu búsqueda aquí..."
+            className="border border-gray-300 rounded py-2 px-4 w-full mb-4"
+          />
+        </div>
+
+        <div className="mb-4">
+        <label className="block font-bold mb-2">Tipo Norma:</label>
+        <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="border border-gray-300 rounded py-2 px-4 w-full"
+          >
+            <option value="">Todas</option>
+            <option value="tipo1">Tipo 1</option>
+            <option value="tipo2">Tipo 2</option>
+            <option value="tipo3">Tipo 3</option>
+          </select>
+        </div>
+        <div className="mb-4">
+        <label className="block font-bold mb-2">Año:</label>
+        <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="border border-gray-300 rounded py-2 px-4 w-full"
+          >
+            <option value="">Todos</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+        <div className="mb-4">
+        <label className="block font-bold mb-2">Estado proceso consulta:</label>
+        <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="border border-gray-300 rounded py-2 px-4 w-full"
+          >
+            <option value="">Todos</option>
+            <option value="estado1">Estado 1</option>
+            <option value="estado2">Estado 2</option>
+            <option value="estado3">Estado 3</option>
+          </select>
+        </div>
         <button
           onClick={handleSearch}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
