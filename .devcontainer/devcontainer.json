@@ -1,3 +1,4 @@
+/*
 {
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:dev-20-bullseye",
   "features": {
@@ -44,3 +45,4 @@
   ],
   "postCreateCommand": "npm install"
 }
+*/
